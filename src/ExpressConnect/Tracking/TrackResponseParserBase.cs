@@ -30,10 +30,7 @@ namespace AY.TNT.ExpressConnect.Tracking
             return document.Root.Element("ContinuationKey").GetTextValue();
         }
 
-        protected virtual ITrackResponse<TConsignment> TrackResponseFactory()
-        {
-            throw new NotImplementedException();
-        }
+        protected abstract ITrackResponse<TConsignment> TrackResponseFactory();
 
         protected virtual ICollection<TConsignment> GetConsignments(XDocument document)
         {
